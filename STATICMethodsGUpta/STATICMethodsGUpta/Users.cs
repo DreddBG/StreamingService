@@ -9,9 +9,9 @@ namespace STATICMethodsGUpta
     public class Users
     {
 
-        private string name;
-        private string email;
-        private string adress;
+        public string name;
+        public string email;
+        public string adress;
         public List<Songs> FavoriteSongs;
 
         public Users (string name, string email)

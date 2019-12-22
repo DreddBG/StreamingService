@@ -10,10 +10,8 @@ namespace STATICMethodsGUpta
     {
         private int songSeeder = 1;
         private string name;
-        public Songs[] Music;
+        public List<Songs> Music;
         public Users[] User;
-
-
 
         public Regulator(string name)
         {
@@ -22,21 +20,30 @@ namespace STATICMethodsGUpta
         public void AddSong(string singer, string title, int duration)
         {
             int id = 0;
-            Music = new Songs[100];
-            Music[id] = new Songs(singer, title, id++, duration);
-
+            Songs song = new Songs(singer, title, id++, duration);
+            Music[id] = song;
         }
         public Songs GetSong(int id)
         {
-            return Music[id].GetInfo();
+            return Music.Where(x => x.id == id).FirstOrDefault();
         }
         public Songs[] GetSongs()
         {
-
+            return Music.ToArray();
         }
         public Songs[] GetSongs(string artist)
         {
+            var temp = new List<Songs>();
 
+            foreach (var song in Music)
+            {
+                if (song.singer == artist)
+                {
+                    temp.Add(song);
+                }
+            }
+
+            return temp.ToArray();
         }
         public void AddUser(string name, string email, string adress)
         {
@@ -46,30 +53,22 @@ namespace STATICMethodsGUpta
         }
         public Users GetUser(string email)
         {
-            foreach(Users user in User)
+            foreach (Users user in User)
             {
-               return user;
+                if(user.email == email)
+                {
+                    return user;
+                }
             }
-           
-            //for (int i = 0; i < User.Length; i++)
-            //{
-            //    if (User[i].Equals(email))
-            //    {
-            //        return User[i];
-            //    }
-            //}
-
+            return null;
         }
         public Users[] GetUsers()
         {
-                      foreach(Users user in User)
-            {
-               return user;
-            }
+            return User;
         }
         public string GetInfo()
         {
-           return 
+            return $"Streaming Music service: {this.name} ({Music.Count} songs & {User.Length})";
         }
     }
 }

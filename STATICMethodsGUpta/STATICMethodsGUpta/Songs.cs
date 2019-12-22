@@ -8,10 +8,10 @@ namespace STATICMethodsGUpta
 {
     public class Songs
     {
-        private string name;
-        private string singer;
-        private int id;
-        private int duration;
+        public string name;
+        public string singer;
+        public int id;
+        public int duration;
 
         public Songs(string name, string singer, int id, int duration)
         {
