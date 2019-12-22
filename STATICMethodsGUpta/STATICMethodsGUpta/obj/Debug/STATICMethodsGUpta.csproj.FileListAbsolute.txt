@@ -2,3 +2,8 @@ D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMe
 D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.Form1.resources
 D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.Properties.Resources.resources
 D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.csproj.GenerateResource.cache
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\bin\Debug\STATICMethodsGUpta.exe.config
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\bin\Debug\STATICMethodsGUpta.exe
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\bin\Debug\STATICMethodsGUpta.pdb
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.exe
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.pdb
