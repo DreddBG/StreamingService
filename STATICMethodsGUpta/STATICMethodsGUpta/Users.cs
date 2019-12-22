@@ -12,6 +12,7 @@ namespace STATICMethodsGUpta
         private string name;
         private string email;
         private string adress;
+        public List<Songs> FavoriteSongs;
 
         public Users (string name, string email)
         {
@@ -24,17 +25,17 @@ namespace STATICMethodsGUpta
             this.email = email;
             this.adress = adress;
         }
-        public void AddSongToFavorites(string song)
+        public void AddSongToFavorites(Songs song)
         {
-
+            FavoriteSongs.Add(song);
         }
         public void RemoveSongFromFavorites(int index)
         {
-
+            FavoriteSongs.RemoveAt(index);
         }
         public string GetFavoriteSongs()
         {
-            return;
+            return string.Join(" ,", FavoriteSongs);
         }
     }
 }

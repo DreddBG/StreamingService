@@ -1,0 +1,4 @@
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.csprojAssemblyReference.cache
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.Form1.resources
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.Properties.Resources.resources
+D:\Programing\Work\StreamingService\StreamingService\STATICMethodsGUpta\STATICMethodsGUpta\obj\Debug\STATICMethodsGUpta.csproj.GenerateResource.cache
