@@ -8,7 +8,6 @@ namespace STATICMethodsGUpta
 {
     public class Regulator
     {
-        private int songSeeder = 1;
         private string name;
         public List<Songs> Music;
         public Users[] User;
@@ -19,7 +18,8 @@ namespace STATICMethodsGUpta
         }
         public void AddSong(string singer, string title, int duration)
         {
-            int id = 0;
+            var rand = new Random();
+            int id = rand.Next(0, 100);
             Songs song = new Songs(singer, title, id++, duration);
             Music[id] = song;
         }
@@ -47,9 +47,9 @@ namespace STATICMethodsGUpta
         }
         public void AddUser(string name, string email, string adress)
         {
-            int id = 0;
+            var rand = new Random();
+            int id = rand.Next(0, 100);
             User[id] = new Users(name, email, adress);
-            id++;
         }
         public Users GetUser(string email)
         {
