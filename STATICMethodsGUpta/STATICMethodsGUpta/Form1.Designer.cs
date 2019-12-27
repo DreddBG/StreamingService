@@ -35,7 +35,7 @@
             this.btnRemoveU = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbBoxAdress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.btnFavorite = new System.Windows.Forms.Button();
@@ -120,11 +120,12 @@
             this.btnRemoveU.TabIndex = 15;
             this.btnRemoveU.Text = "Remove Selected User";
             this.btnRemoveU.UseVisualStyleBackColor = true;
+            this.btnRemoveU.Click += new System.EventHandler(this.btnRemoveU_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.tbBoxAdress);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.tbEmail);
             this.groupBox2.Controls.Add(this.btnFavorite);
@@ -149,12 +150,12 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Adress";
             // 
-            // textBox1
+            // tbBoxAdress
             // 
-            this.textBox1.Location = new System.Drawing.Point(78, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 25);
-            this.textBox1.TabIndex = 14;
+            this.tbBoxAdress.Location = new System.Drawing.Point(78, 96);
+            this.tbBoxAdress.Name = "tbBoxAdress";
+            this.tbBoxAdress.Size = new System.Drawing.Size(158, 25);
+            this.tbBoxAdress.TabIndex = 14;
             // 
             // label8
             // 
@@ -171,6 +172,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(158, 25);
             this.tbEmail.TabIndex = 12;
+            this.tbEmail.TextChanged += new System.EventHandler(this.tbEmail_TextChanged);
             // 
             // btnFavorite
             // 
@@ -180,6 +182,7 @@
             this.btnFavorite.TabIndex = 11;
             this.btnFavorite.Text = "Add Favorite Song To User";
             this.btnFavorite.UseVisualStyleBackColor = true;
+            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
             // btnAddUser
             // 
@@ -222,6 +225,7 @@
             this.tbAddName.Name = "tbAddName";
             this.tbAddName.Size = new System.Drawing.Size(158, 25);
             this.tbAddName.TabIndex = 6;
+            this.tbAddName.TextChanged += new System.EventHandler(this.tbAddName_TextChanged);
             // 
             // label7
             // 
@@ -266,6 +270,7 @@
             this.btnShowS.TabIndex = 12;
             this.btnShowS.Text = "Show Songs";
             this.btnShowS.UseVisualStyleBackColor = true;
+            this.btnShowS.Click += new System.EventHandler(this.btnShowS_Click);
             // 
             // btnRemoveS
             // 
@@ -275,6 +280,7 @@
             this.btnRemoveS.TabIndex = 11;
             this.btnRemoveS.Text = "Remove Selected Song";
             this.btnRemoveS.UseVisualStyleBackColor = true;
+            this.btnRemoveS.Click += new System.EventHandler(this.btnRemoveS_Click);
             // 
             // groupBox1
             // 
@@ -316,6 +322,7 @@
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add Song";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label4
             // 
@@ -332,6 +339,7 @@
             this.tbLength.Name = "tbLength";
             this.tbLength.Size = new System.Drawing.Size(120, 25);
             this.tbLength.TabIndex = 8;
+            this.tbLength.TextChanged += new System.EventHandler(this.tbLength_TextChanged);
             // 
             // label3
             // 
@@ -379,6 +387,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Kristian\'s music stream";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -419,7 +428,7 @@
         private System.Windows.Forms.Button btnShowU;
         private System.Windows.Forms.Button btnShowS;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbBoxAdress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label10;

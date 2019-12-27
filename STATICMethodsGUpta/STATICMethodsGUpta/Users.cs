@@ -6,24 +6,30 @@ using System.Threading.Tasks;
 
 namespace STATICMethodsGUpta
 {
-    public class Users
+    public class Members
     {
 
-        public string name;
-        public string email;
-        public string adress;
-        public List<Songs> FavoriteSongs;
+        private string name;
+        private string email;
+        private string adress;
+        private List<Songs> FavoriteSongs = new List<Songs>();
 
-        public Users (string name, string email)
+        public Members (string name, string email)
         {
             this.name = name;
             this.email = email;
         }
-        public Users(string name, string email, string adress)
+        public Members(string name, string email, string adress)
         {
             this.name = name;
             this.email = email;
             this.adress = adress;
+        }
+
+        public bool CheckEmail(string email)
+        {
+            if (email == this.email) return true;
+            else return false;
         }
         public void AddSongToFavorites(Songs song)
         {
@@ -35,7 +41,14 @@ namespace STATICMethodsGUpta
         }
         public string GetFavoriteSongs()
         {
-            return string.Join(" ,", FavoriteSongs);
+            var output = new List<string>();
+            FavoriteSongs.ForEach(x => output.Add(x.GetName()));
+
+            return $"{this.name} => {string.Join(", ", output)}";
+        }
+        public string GetInfo()
+        {
+            return $"{name}, {email}, {adress}";
         }
     }
 }

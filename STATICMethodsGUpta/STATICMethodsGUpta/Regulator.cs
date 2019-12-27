@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace STATICMethodsGUpta
 {
     public class Regulator
     {
         private string name;
-        public List<Songs> Music;
-        public Users[] User;
+        public List<Songs> Music = new List<Songs>();
+        public List<Members> Users = new List<Members>();
 
         public Regulator(string name)
         {
@@ -18,14 +19,14 @@ namespace STATICMethodsGUpta
         }
         public void AddSong(string singer, string title, int duration)
         {
-            var rand = new Random();
-            int id = rand.Next(0, 100);
-            Songs song = new Songs(singer, title, id++, duration);
-            Music[id] = song;
+            var rang = new Random();
+            var randNum = rang.Next(0, 100);
+            Songs song = new Songs(singer, title, randNum, duration);
+            Music.Add(song);
         }
         public Songs GetSong(int id)
         {
-            return Music.Where(x => x.id == id).FirstOrDefault();
+            return Music.Where(x => x.GetId() == id).FirstOrDefault();
         }
         public Songs[] GetSongs()
         {
@@ -37,7 +38,7 @@ namespace STATICMethodsGUpta
 
             foreach (var song in Music)
             {
-                if (song.singer == artist)
+                if (song.GetSinger() == artist)
                 {
                     temp.Add(song);
                 }
@@ -47,28 +48,27 @@ namespace STATICMethodsGUpta
         }
         public void AddUser(string name, string email, string adress)
         {
-            var rand = new Random();
-            int id = rand.Next(0, 100);
-            User[id] = new Users(name, email, adress);
+            var curUser = new Members(name, email, adress);
+            Users.Add(curUser);
         }
-        public Users GetUser(string email)
+        public Members GetUser(string email)
         {
-            foreach (Users user in User)
+            foreach (Members user in Users)
             {
-                if(user.email == email)
+                if(user.CheckEmail(email))
                 {
                     return user;
                 }
             }
             return null;
         }
-        public Users[] GetUsers()
+        public Members[] GetUsers()
         {
-            return User;
+            return Users.ToArray();
         }
         public string GetInfo()
         {
-            return $"Streaming Music service: {this.name} ({Music.Count} songs & {User.Length})";
+            return $"Streaming Music service: {this.name} ({Music.Count} songs & {Users.Count})";
         }
     }
 }

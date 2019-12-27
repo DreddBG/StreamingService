@@ -8,10 +8,10 @@ namespace STATICMethodsGUpta
 {
     public class Songs
     {
-        public string name;
-        public string singer;
-        public int id;
-        public int duration;
+        private string name;
+        private string singer;
+        private int id;
+        private int duration;
 
         public Songs(string name, string singer, int id, int duration)
         {
@@ -27,6 +27,10 @@ namespace STATICMethodsGUpta
         public string GetSinger()
         {
             return singer;
+        }
+        public string GetName()
+        {
+            return this.name;
         }
         public string GetInfo()
         {
